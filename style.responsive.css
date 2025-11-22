@@ -17,7 +17,7 @@
 
   /* Devices / mocks */
   --phoneW:  clamp(240px, 24vmin, 360px);
-  --laptopMax: min(1040px, 90vmin);
+  --laptopMax: min(1320px, 100vmin);
 
   /* Sections */
   --sectionPadTop: calc(var(--navH) + 24px);
@@ -60,11 +60,16 @@ body{
 .nav-links a:hover{opacity:.7}
 .nav-toggle{display:none; border:1px solid var(--line); background:#fff; border-radius:8px; padding:6px 10px; font-size:16px;}
 
+.lang-switch{display:flex; align-items:center; gap:6px; margin-left:8px;}
+.lang-switch .lang{ text-decoration:none; color:#111; font-weight:600; padding:6px 8px; border-radius:8px;}
+.lang-switch .lang.is-active{ background:#f2f2f2;}
+
 /* Mobile nav */
 @media (max-width: 860px){
   .nav-toggle{display:block}
   .nav-links{display:none; position:absolute; right:24px; top:calc(100% + 8px); background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px; box-shadow:0 16px 40px rgba(0,0,0,.08); flex-direction:column; min-width: 200px;}
   .nav-links.open{display:flex}
+  .nav-links .lang-switch{ margin-top:6px;}
 }
 
 /* ============================ SCROLL / SECTION LAYOUT ======================== */
@@ -151,7 +156,7 @@ h1,h2{margin:0 0 8px} h2{font-size:var(--h2)}
 }
 .how .section-kicker{
   text-align:center;
-  font-size: clamp(15px, 2vmin, 18px);
+  font-size: clamp(16px, 2.4vmin, 20px);
   color:var(--muted);
   margin:0 0 34px;
 }
@@ -174,15 +179,15 @@ h1,h2{margin:0 0 8px} h2{font-size:var(--h2)}
   object-fit:cover; border-radius:16px; margin:0;
 }
 .how .how-card h2{ font-size: clamp(22px, 2.5vmin, 32px); font-weight:800; color:#111; margin:12px 0 10px; }
-.how .how-card .desc{ font-size: clamp(14px, 1.4vmin, 16px); color:#111; line-height:1.6; max-width:80%; margin:0 auto; }
+.how .how-card .desc{ font-size: clamp(15px, 1.8vmin, 18px); color:#111; line-height:1.6; max-width:80%; margin:0 auto; }
 
 @media (max-width:1100px){
   .how .how-grid{ grid-template-columns:1fr; }
 }
 
 /* ============================== FOR CONSUMERS ================================ */
-#consumers.snap-section{ align-items: flex-start; }
-#consumers .wrap{ padding: 10px 0; }
+#consumers.snap-section{ align-items: center; }
+#consumers .wrap{ padding: var(--sectionPadTop) var(--padX) var(--sectionPadBot); }
 
 #consumers .section-title{
   font-size: var(--consTitleSize);
@@ -230,7 +235,7 @@ h1,h2{margin:0 0 8px} h2{font-size:var(--h2)}
   margin-bottom: 14px;
 }
 .phone-card figcaption{
-  font-size: clamp(13px, 1.2vmin, 15px);
+  font-size: clamp(15px, 1.9vmin, 19px);
   color: #111;
   line-height: 1.6;
   margin: 6px auto 0;
@@ -249,7 +254,7 @@ h1,h2{margin:0 0 8px} h2{font-size:var(--h2)}
 .brand { background:#fafafa; text-align:center; }
 .brand .wrap{ max-width: min(1340px, 96vw); }
 .brand .section-head h2{ font-size: clamp(32px, 6vmin, 56px); font-weight:800; margin:0 0 6px; color:var(--text); }
-.brand .section-head p{ font-size: clamp(14px, 2vmin, 18px); color:var(--muted); margin:0 0 18px; }
+.brand .section-head p{ font-size: clamp(15px, 2.4vmin, 20px); color:var(--muted); margin:0 0 18px; }
 
 .brand-stage{
   display:flex; align-items:center; justify-content:center;
@@ -266,19 +271,19 @@ h1,h2{margin:0 0 8px} h2{font-size:var(--h2)}
 .left-rail .callout{
   background:#fff; border:1px solid var(--line); border-radius:16px;
   box-shadow:0 12px 30px rgba(0,0,0,.07);
-  padding:16px 18px; font-size:clamp(14px, 1.4vmin, 15px); line-height:1.6; color:#111;
+  padding:16px 18px; font-size:clamp(15px, 1.8vmin, 17px); line-height:1.6; color:#111;
 }
 
 .brand .device.laptop{
-  flex:1 1 600px;
+  flex: 1.7 1 740px;              /* even more space in the flex row */
   width: 100%;
-  max-width: var(--laptopMax);
+  max-width: var(--laptopMax);    /* allow a wider card on large screens */
   margin: 0;
   background:#fff;
   border:1px solid var(--line);
   border-radius:24px;
-  box-shadow:0 24px 60px rgba(0,0,0,.06);
-  padding: clamp(12px, 2vmin, 20px);
+  box-shadow:0 30px 80px rgba(0,0,0,.10);
+  padding: clamp(16px, 2.6vmin, 26px);   /* slightly more padding for visual balance */
 }
 .brand .device.laptop img{
   width:100%; height:auto; display:block; border-radius:18px; object-fit:contain;
@@ -389,14 +394,14 @@ h1,h2{margin:0 0 8px} h2{font-size:var(--h2)}
   .consumers-grid{ grid-template-columns:1fr; gap:14px; padding:6px var(--padX); }
   .phone-card{ border-radius:18px; padding:14px; min-height:auto; box-shadow:0 12px 28px rgba(0,0,0,.05); }
   .phone-img{ height:clamp(320px, 70vw, 420px); border-radius:14px; }
-  .phone-card figcaption{ font-size:13px; min-height:auto; }
+  .phone-card figcaption{ font-size:15px; min-height:auto; }
 
   /* 6) “For Brand Managers” → stack rail + device, center headings */
   .brand{ text-align:left; }
   .brand .section-head h2, .brand .section-head p{ text-align:center; }
   .brand-stage{ flex-direction:column; gap:16px; }
   .left-rail{ max-width:100%; }
-  .left-rail .callout{ font-size:14px; }
+  .left-rail .callout{ font-size:15px; }
   .brand .device.laptop{
     order: -1;                 /* show dashboard first on mobile (above captions) */
     flex: 0 0 auto;            /* prevent tall blank space from flex-basis */

@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="alternate" hreflang="ja" href="./ja/">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="alternate" hreflang="x-default" href="./">
+  <!-- title/desc in EN -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Beauty Echo — AI Platform for Beauty Brands</title>
@@ -19,6 +23,11 @@
         <a href="#consumers">For Consumers</a>
         <a href="#brand">For Brand Managers</a>
         <a href="#final">Contact</a>
+      </div>
+      <div class="lang-switch" role="navigation" aria-label="Language">
+        <a class="lang is-active" href="./" lang="en">EN</a>
+        <span aria-hidden="true">/</span>
+        <a class="lang" href="ja/" lang="ja">日本語</a>
       </div>
     </div>
   </nav>
@@ -56,19 +65,19 @@
           <div class="how-card">
             <img src="assets/how-listen.jpg" alt="Engage" class="how-img" loading="lazy">
             <h2>Engage</h2>
-            <p class="desc">Peer-to-peer chats where real consumers inspire each other — Beauty Echo transforms authentic conversations into privacy-safe, real-time signals.</p>
+            <p class="desc">Consumers who share similar concerns and interests are brought together into a space where peer-to-peer conversations naturally spark new insights.</p>
           </div>
 
           <div class="how-card">
             <img src="assets/how-analyze.png" alt="Analyze" class="how-img" loading="lazy">
             <h2>Analyze</h2>
-            <p class="desc">NLP reveals emerging themes, sentiment, and ingredient trends — uncovering deep insights and root causes automatically.</p>
+            <p class="desc">Emerging themes, sentiment, and ingredient trends from the conversations are identified through Natural Language Processing (NLP), uncovering deeper insights automatically.</p>
           </div>
 
           <div class="how-card">
             <img src="assets/how-recommend.png" alt="Recommend" class="how-img" loading="lazy">
             <h2>Recommend</h2>
-            <p class="desc">Turn insights into testable actions, creative ideas, and faster product iterations — instantly.</p>
+            <p class="desc">Insights are transformed into testable actions, creative ideas, and faster product iterations.</p>
           </div>
         </div>
       </div>
@@ -85,17 +94,17 @@
         <div class="consumers-grid">
           <figure class="phone-card">
             <img class="phone-img" src="assets/iphone-1.png" alt="Group-buy screen" loading="lazy">
-            <figcaption>Group-buy channel helps attract and incentivize users</figcaption>
+            <figcaption>A group-buying channel makes it easier for consumers to try brand products at a discounted price.</figcaption>
           </figure>
 
           <figure class="phone-card">
             <img class="phone-img" src="assets/iphone-2.png" alt="Peer chat screen" loading="lazy">
-            <figcaption>Chats inspired by peers echo deeper, diversified insights</figcaption>
+            <figcaption>People who share similar concerns and interests can exchange opinions in a safe space, sparking new learnings and moments of empathy.</figcaption>
           </figure>
 
           <figure class="phone-card">
             <img class="phone-img" src="assets/iphone-3.png" alt="Brand manager chat screen" loading="lazy">
-            <figcaption>Brand managers can talk directly with users for feedback and ideas</figcaption>
+            <figcaption>Consumers can interact directly with brand managers, creating real opportunities for their voices to influence future products.</figcaption>
           </figure>
         </div>
       </div>
@@ -106,12 +115,12 @@
       <div class="wrap">
         <header class="section-head">
           <h2>For Brand Managers</h2>
-          <p class="muted">NLP dashboard summarizes conversations into actionable insights.</p>
+          <p class="muted">A Natural Language Processing (NLP) dashboard summarizes conversations into actionable insights.</p>
         </header>
 
         <div class="brand-stage">
           <div class="left-rail">
-            <div class="callout"><strong>Dashboard</strong>,<br>summarized by our AI’s NLP, provides brands with actionable insights</div>
+            <div class="callout"><strong>Dashboard</strong>,<br>summarized by our AI’s Natural Language Processing (NLP), provides brands with actionable insights</div>
             <div class="callout"><strong>Consumer statistics</strong>,<br>help understand their backgrounds</div>
             <div class="callout"><strong>Deep analysis</strong>,<br>leads to better solutions &amp; faster iterations</div>
           </div>
@@ -137,7 +146,7 @@
         <div class="final-block">
           <h2>Team</h2>
           <p><strong>Delong Wang, Ph.D.</strong> — Founder &amp; CEO</p>
-          <p class="muted">Seeking CTO co-founder (NLP/Data Engineering).</p>
+          <p class="muted">Seeking CTO co-founder (Natural Language Processing (NLP) / Data Engineering).</p>
         </div>
         <div class="final-block">
           <h2>Contact</h2>
@@ -163,6 +172,27 @@
         toggle.setAttribute('aria-expanded', String(open));
       });
     }
+  </script>
+  <script>
+    (function(){
+      try{
+        const KEY = 'be_lang';
+        const chosen = localStorage.getItem(KEY);
+        if(!chosen){
+          const isJA = (navigator.language || '').toLowerCase().startsWith('ja');
+          if(isJA && location.pathname.endsWith('/')){ location.replace('ja/'); }
+          if(isJA && location.pathname.endsWith('/index.html')){ location.replace('../ja/'); }
+        }
+
+        // remember clicks on the switcher
+        document.querySelectorAll('.lang-switch .lang').forEach(a=>{
+          a.addEventListener('click', ()=> {
+            const lang = a.getAttribute('lang') || (a.textContent.includes('日本')?'ja':'en');
+            localStorage.setItem(KEY, lang);
+          });
+        });
+      }catch(e){}
+    })();
   </script>
 </body>
 </html>
