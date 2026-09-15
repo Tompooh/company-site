@@ -9,20 +9,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ビューティーエコー — ビューティーブランドのためのAIプラットフォーム</title>
   <meta name="description" content="AIの力で、ビューティーブランドが消費者をより深く理解するためのプラットフォーム">
-  <link rel="stylesheet" href="../style.responsive.css?v=2">
+  <link rel="stylesheet" href="../style.responsive.css?v=7">
 </head>
-<body>
+<body class="homepage-v2">
 
   <nav class="topnav" aria-label="Primary">
     <div class="wrap">
-      <div class="logo">Beauty Echo</div>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <div class="nav-links">
-        <a href="#hero">ホーム</a>
-        <a href="#how">仕組み</a>
-        <a href="#consumers">生活者向け</a>
-        <a href="#brand">ブランド担当者向け</a>
-        <a href="#final">お問い合わせ</a>
+      <a class="logo" href="#hero">Beauty Echo</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="primary-navigation">
+        <a href="#how">ご利用の流れ</a>
+        <a href="#consumers">消費者体験</a>
+        <a href="#evidence">検証結果</a>
+        <a href="#brand">ブランドへの提供価値</a>
+        <a href="#partner" class="nav-cta">協業のご相談</a>
       </div>
       <div class="lang-switch" role="navigation" aria-label="言語切替">
         <a class="lang" href="../" lang="en">EN</a>
@@ -37,125 +37,218 @@
     <!-- 1) HERO -->
     <section id="hero" class="snap-section hero">
       <div class="wrap hero-content">
-        <div class="logo-wrap">
-          <img class="logo-mark" src="assets/logo.svg" alt="Beauty Echo ロゴ" loading="lazy"
-               onerror="this.onerror=null;this.src='assets/logo.png'">
-        </div>
+        <div class="hero-copy">
+          <div class="logo-wrap">
+            <img class="logo-mark" src="../assets/logo.png" alt="" width="1404" height="982">
+          </div>
 
-        <h1 class="brand-title">ビューティーエコー</h1>
-        <p class="brand-sub">
-          AIの力で、ビューティーブランドが消費者をより深く理解するためのプラットフォーム
-        </p>
-        <div class="ctas">
-          <a href="#final" class="btn primary">パイロットに参加</a>
-          <a href="#final" class="btn ghost">お問い合わせ</a>
+          <p class="hero-label">Beauty Echo</p>
+          <h1 class="brand-title">化粧品の購入を、<span class="ja-no-break">消費者一人ひとりとの</span>関係の始まりに</h1>
+          <div class="ctas">
+            <a href="#partner" class="btn primary">協業のご相談</a>
+            <a href="#how" class="btn ghost">ご利用の流れを見る</a>
+          </div>
         </div>
       </div>
 
       <div class="hero-image-overlay" aria-hidden="true"></div>
     </section>
 
-    <!-- 2) HOW IT WORKS -->
-    <section id="how" class="snap-section how">
-      <div class="wrap">
-        <h1 class="section-title">プラットフォームの仕組み</h1>
-        <p class="section-kicker muted">エンゲージ · 分析 · 提案</p>
-
-        <div class="how-grid">
-          <div class="how-card">
-            <img src="assets/how-listen.jpg" alt="Engage" class="how-img" loading="lazy">
-            <h2>エンゲージ</h2>
-            <p class="desc">同じ悩みや興味を持つ生活者が集まり、ピア同士の自然な会話から互いに気づきを得られる場をつくります</p>
-          </div>
-
-          <div class="how-card">
-            <img src="assets/how-analyze.png" alt="Analyze" class="how-img" loading="lazy">
-            <h2>分析</h2>
-            <p class="desc">自然言語処理がチャットの文脈からテーマ・感情・成分トレンドを抽出し、深いインサイトと原因を自動で可視化します</p>
-          </div>
-
-          <div class="how-card">
-            <img src="assets/how-recommend.png" alt="Recommend" class="how-img" loading="lazy">
-            <h2>提案</h2>
-            <p class="desc">得られたインサイトを具体的な打ち手・クリエイティブ案・製品改良案に変換し、素早いPDCAを支援します</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3) FOR CONSUMERS -->
-    <section id="consumers" class="snap-section consumers">
-      <div class="wrap">
-        <h2 class="section-title">生活者向けの価値</h2>
-        <p class="section-kicker">グループ購入チャネル、専用チャットルーム、直接の対話「ラボ」を一つのアプリに集約します</p>
-
-        <div class="consumers-grid">
-          <figure class="phone-card">
-            <img class="phone-img" src="assets/iphone-1.png" alt="グループ購入画面" loading="lazy">
-            <figcaption>グループ購入によって、ブランド製品を手頃に試しやすくなります</figcaption>
-          </figure>
-
-          <figure class="phone-card">
-            <img class="phone-img" src="assets/iphone-2.png" alt="ピアチャット画面" loading="lazy">
-            <figcaption>同じ悩みや興味を持つ人同士が、安心して意見交換でき、気づきや共感が生まれます</figcaption>
-          </figure>
-
-          <figure class="phone-card">
-            <img class="phone-img" src="assets/iphone-3.png" alt="ブランド担当者チャット画面" loading="lazy">
-            <figcaption>ブランド担当者と直接やり取りでき、自分の声を製品づくりに反映してもらえる機会が生まれます</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4) BRAND MANAGERS -->
-    <section id="brand" class="snap-section brand">
-      <div class="wrap">
-        <header class="section-head">
-          <h2>ブランド担当者向け</h2>
-          <p class="muted">会話ログをAIによる自然言語処理が自動集約し、すぐに使えるダッシュボードとして提示します</p>
+    <!-- 2) POST-PURCHASE PROBLEM -->
+    <section id="post-purchase-gap" class="snap-section problem">
+      <div class="wrap problem-grid">
+        <header class="problem-head">
+          <p class="section-label">購入後のギャップ</p>
+          <h2>購入後にこそ、<span class="ja-no-break">商品体験の</span>大切な瞬間が生まれます</h2>
         </header>
 
-        <div class="brand-stage">
-          <div class="left-rail">
-            <div class="callout"><strong>ダッシュボード</strong><br>AIの自然言語処理がチャット内容を整理し、ブランドがすぐ動ける示唆に変換します</div>
-            <div class="callout"><strong>生活者プロフィール</strong><br>年代・肌質などの統計から、ターゲット像を直感的に把握できます</div>
-            <div class="callout"><strong>深堀り分析</strong><br>原因仮説や施策案を可視化し、より良い解決策と高速な改善サイクルを実現します</div>
-          </div>
+        <div class="problem-content">
+          <p>ブランドは何が購入されたかは把握できても、その後に生まれる<span class="ja-no-break">疑問や迷い、</span>使い方の変化までは見えにくいのが現状です。</p>
 
-          <figure class="device laptop">
-            <img src="assets/macbook-mock.png" alt="ブランド向けダッシュボード" loading="lazy">
-          </figure>
+          <ul class="question-list">
+            <li>「これ、使い方は合ってる？」</li>
+            <li>「ビタミンCと一緒に使っても大丈夫？」</li>
+            <li>「今日は、なんだかいつもと違う。<span class="ja-no-break">どうして？」</span></li>
+          </ul>
+
+          <p class="problem-conclusion">Beauty Echoは、こうした購入後の対話を、継続的な顧客接点へと<span class="ja-no-break">変えていきます。</span></p>
         </div>
       </div>
     </section>
 
-    <!-- 5) VALUE + TEAM + CONTACT -->
-    <section id="final" class="snap-section final">
-      <div class="wrap final-grid">
-        <div class="final-block">
-          <h2>ブランドにもたらす価値</h2>
-          <ul class="bullets">
-            <li>フィードバックから打ち手までのサイクルを大幅に短縮</li>
-            <li>商品企画の「勘に依存」を軽減</li>
-            <li>会話データに裏付けられた実証的なソリューション提案</li>
-          </ul>
-        </div>
-        <div class="final-block">
-          <h2>チーム</h2>
-          <p><strong>王　徳龍　博士</strong> ー 創業者・代表</p>
-          <p class="muted">自然言語処理／データエンジニアリング領域のCTO共同創業者を募集中</p>
-        </div>
-        <div class="final-block">
-          <h2>お問い合わせ</h2>
-          <p>メール： <a href="mailto:delongw@beauty-echo.com">delongw@beauty-echo.com</a></p>
-          <p>LinkedIn： <a href="https://www.linkedin.com/in/delong-wang-ph-d-02a936133" target="_blank" rel="noopener">www.linkedin.com/in/delong-wang-ph-d-02a936133</a></p>
-          <p class="status muted">MVPローンチ済み／CTO共同創業者募集中／パイロット参加ブランド受付中</p>
+    <!-- 3) HOW IT WORKS -->
+    <section id="how" class="snap-section how">
+      <div class="wrap">
+        <header class="v2-section-head">
+          <p class="section-label">ご利用の流れ</p>
+          <h2 class="v2-section-title"><span class="ja-no-break">購入を起点に、</span><span class="ja-no-break">一人ひとりに</span>合った<span class="ja-no-break">サポートを届け、</span><span class="ja-no-break">その対話を</span><span class="ja-no-break">次のアクションに</span><span class="ja-no-break">つなげる</span></h2>
+        </header>
+
+        <ol class="how-grid">
+          <li class="how-card">
+            <p class="how-step">01 — 購入</p>
+            <h3>購入を、<span class="ja-no-break">関係の始まりにする</span></h3>
+            <p class="desc">購入した商品を起点に、気軽に相談できる<span class="ja-no-break">プライベートな対話チャネルで、</span>購入後の関係を始めます。</p>
+          </li>
+
+          <li class="how-card">
+            <p class="how-step">02 — サポート</p>
+            <h3>一人ひとりの<span class="ja-no-break">スキンケアを支える</span></h3>
+            <p class="desc">商品や使い方、ルーティンの疑問に<span class="ja-no-break">寄り添い、</span>毎日の<span class="ja-no-break">スキンケア</span>を<span class="ja-no-break">分かりやすく、</span><span class="ja-no-break">続けやすくします。</span></p>
+          </li>
+
+          <li class="how-card">
+            <p class="how-step">03 — 次のアクション</p>
+            <h3>日々の対話を、<span class="ja-no-break">価値ある知見に変える</span></h3>
+            <p class="desc">購入後のやり取りを整理・構造化し、商品づくりや<span class="ja-no-break">顧客コミュニケーション</span>の<span class="ja-no-break">より良い判断</span>に<span class="ja-no-break">つなげます。</span></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4) 消費者体験 -->
+    <section id="consumers" class="snap-section consumers">
+      <div class="wrap">
+        <header class="v2-section-head consumer-intro">
+          <p class="section-label">消費者体験</p>
+          <h2 class="v2-section-title">商品を使う毎日に、必要なサポートを</h2>
+        </header>
+
+        <div class="experience-grid">
+          <article class="experience-card">
+            <h3>商品や成分の組み合わせを理解する</h3>
+            <div class="experience-visual">
+              <p class="experience-quote">「ビタミンCと一緒に使っても大丈夫？」</p>
+            </div>
+            <p class="experience-copy">商品や成分の組み合わせに関する疑問を、<span class="ja-no-break">科学的な情報をもとに</span><span class="ja-no-break">分かりやすく</span><span class="ja-no-break">整理します。</span></p>
+          </article>
+
+          <article class="experience-card">
+            <h3>肌の変化に気づく</h3>
+            <div class="experience-visual">
+              <p class="experience-quote">「今週は、どうして肌の感じが違うんだろう？」</p>
+            </div>
+            <p class="experience-copy">肌や商品の使用感が時間とともに<span class="ja-no-break">どう変わったか</span>を振り返り、毎日の<span class="ja-no-break">スキンケア</span>を理解しやすくします。</p>
+          </article>
+
+          <article class="experience-card">
+            <h3>対話を重ね、より自分に合った体験へ</h3>
+            <div class="experience-visual">
+              <p class="experience-quote"><span class="experience-quote-text">「話すほど、<span class="ja-no-break">自分に合った</span><span class="ja-no-break">サポートになっていく」</span></span></p>
+            </div>
+            <p class="experience-copy">これまでの対話を踏まえ、一人ひとりの状況に合ったサポートにつなげます。</p>
+          </article>
         </div>
       </div>
-      <footer class="foot">
-        © 2025 Beauty Echo · <a href="#">プライバシー</a> · <a href="#">利用規約</a>
-      </footer>
+    </section>
+
+    <!-- 5) PoCによる検証結果 -->
+    <section id="evidence" class="snap-section evidence">
+      <div class="wrap">
+        <header class="v2-section-head evidence-head">
+          <p class="section-label">PoCによる検証結果</p>
+          <h2 class="v2-section-title">PoC参加者が<span class="ja-no-break">高く評価した、</span><span class="ja-no-break">購入後の対話体験</span></h2>
+          <p class="evidence-sample">最終アンケート　<strong>n = 16</strong></p>
+        </header>
+
+        <div class="metric-grid" aria-label="PoCによる検証結果">
+          <article class="metric-block">
+            <p class="metric-score">4.81 / 5</p>
+            <h3>商品体験の向上</h3>
+          </article>
+          <article class="metric-block">
+            <p class="metric-score">4.69 / 5</p>
+            <h3>スキンケアの疑問解決</h3>
+          </article>
+          <article class="metric-block">
+            <p class="metric-score">4.69 / 5</p>
+            <h3>AIによるアドバイスへの信頼感</h3>
+          </article>
+          <article class="metric-block">
+            <p class="metric-score">4.44 / 5</p>
+            <h3>AIとの対話意欲</h3>
+          </article>
+        </div>
+
+        <p class="evidence-finding">参加者からは、日々のスキンケアの疑問にすぐ答えられること、商品やルーティンの組み合わせを<span class="ja-no-break">相談できること、</span>科学的な説明が分かりやすいことに加え、これまでの対話や商品の使用状況が引き継がれ、自分に合った回答につながることが評価されました。</p>
+      </div>
+    </section>
+
+    <!-- 6) ブランドへの提供価値 -->
+    <section id="brand" class="snap-section brand-values">
+      <div class="wrap brand-value-layout">
+        <div class="brand-value-intro">
+          <header class="v2-section-head">
+            <p class="section-label">ブランドへの提供価値</p>
+            <h2 class="v2-section-title">購入後の行動や<span class="ja-no-break">体験を理解し、</span><span class="ja-no-break">よりスマートな</span><span class="ja-no-break">顧客</span><span class="ja-no-break">コミュニケーションへ</span></h2>
+          </header>
+        </div>
+
+        <div class="brand-value-grid">
+          <article class="brand-value-item">
+            <h3>商品の使われ方を理解する</h3>
+            <p>購入後に生まれる疑問や<span class="ja-no-break">スキンケア習慣</span>、<span class="ja-no-break">商品の組み合わせ</span>、<span class="ja-no-break">使い方の傾向</span>を<span class="ja-no-break">捉えます。</span></p>
+          </article>
+          <article class="brand-value-item">
+            <h3>消費者インサイトを発見する</h3>
+            <p>対話の中に現れる<span class="ja-no-break">テーマや行動</span>、<span class="ja-no-break">つまずき</span>、<span class="ja-no-break">動機</span>、<span class="ja-no-break">新たなニーズ</span>を捉え、<span class="ja-no-break">ブランドの次の判断に</span><span class="ja-no-break">つなげます。</span></p>
+          </article>
+          <article class="brand-value-item">
+            <h3>より的確なコミュニケーションをつくる</h3>
+            <p><span class="ja-no-break">ブランド監修</span>の<span class="ja-no-break">商品知識</span>や<span class="ja-no-break">美容情報</span>を、<span class="ja-no-break">消費者の疑問</span>や<span class="ja-no-break">使用状況</span>に合わせ、<span class="ja-no-break">自然な対話の中で</span><span class="ja-no-break">届けます。</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7) Beauty Echoとの協業 -->
+    <section id="partner" class="snap-section partner" aria-labelledby="partner-title">
+      <div class="wrap">
+        <div class="partner-header">
+          <header class="v2-section-head">
+            <p class="section-label">Beauty Echoとの協業</p>
+            <h2 id="partner-title" class="v2-section-title">ブランドが培ってきた<span class="ja-no-break">美容・商品知識を、</span><span class="ja-no-break">一人ひとりの</span><span class="ja-no-break">購入後体験に活かす</span></h2>
+          </header>
+
+          <figure class="partner-testimonial">
+            <blockquote>
+              <p>「とっても楽しく、美容の知識を<span class="ja-no-break">理解することができました！</span> <span class="ja-no-break">人に話すにはちょっと恥ずかしい</span><span class="ja-no-break">内容なども</span>、<span class="ja-no-break">AIの方になら</span><span class="ja-no-break">素直に聞けてよかったです。」</span></p>
+            </blockquote>
+            <figcaption>PoC参加者</figcaption>
+          </figure>
+        </div>
+
+        <div class="partner-benefits">
+          <article class="partner-benefit">
+            <h3>ブランドの専門性を、<span class="ja-no-break">必要な瞬間</span>の<span class="ja-no-break">サポートに変える</span></h3>
+          </article>
+          <article class="partner-benefit">
+            <h3><span class="ja-no-break">購入後の体験から学ぶ</span></h3>
+          </article>
+          <article class="partner-benefit">
+            <h3>美容教育を、<span class="ja-no-break">購入後も続く</span><span class="ja-no-break">顧客コミュニケーション</span>に<span class="ja-no-break">つなげる</span></h3>
+          </article>
+        </div>
+
+        <div class="partner-contact">
+          <p class="partner-founder"><strong><span class="ja-no-break">王 徳龍 博士</span> <span class="ja-no-break">— 創業者・最高経営責任者</span></strong></p>
+          <p class="partner-credibility">東京大学で<span class="ja-no-break">博士号を取得後、</span><span class="ja-no-break">国内大手化粧品メーカーで、</span><span class="ja-no-break">化粧品の商品開発、</span><span class="ja-no-break">皮膚科学研究、</span><span class="ja-no-break">研究開発チームの</span><span class="ja-no-break">マネジメントなど、</span><span class="ja-no-break">幅広い経験</span>を<span class="ja-no-break">積む。</span></p>
+          <div class="ctas">
+            <a class="btn primary" href="mailto:delongw@beauty-echo.com">メールで問い合わせる</a>
+            <a href="mailto:delongw@beauty-echo.com">delongw@beauty-echo.com</a>
+            <a href="https://www.linkedin.com/in/delong-wang-ph-d-02a936133" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+
+        <footer class="footer-bottom">
+          <p>© 2026 Beauty Echo</p>
+          <div class="lang-switch" role="navigation" aria-label="フッター言語切替">
+            <a class="lang" href="../" lang="en">EN</a>
+            <span aria-hidden="true">/</span>
+            <a class="lang is-active" href="./" lang="ja" aria-current="page">日本語</a>
+          </div>
+        </footer>
+      </div>
     </section>
 
   </main>

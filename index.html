@@ -7,22 +7,22 @@
   <!-- title/desc in EN -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beauty Echo — AI Platform for Beauty Brands</title>
-  <meta name="description" content="AI powered platform that helps beauty brands understand consumers better.">
-  <link rel="stylesheet" href="style.responsive.css?v=2">
+  <title>Beauty Echo — AI-Powered Post-Purchase Engagement for Beauty Brands</title>
+  <meta name="description" content="Beauty Echo helps beauty brands turn the post-purchase product journey into personalized consumer guidance, structured insight, and opportunities for stronger CRM and retention.">
+  <link rel="stylesheet" href="style.responsive.css?v=4">
 </head>
-<body>
+<body class="homepage-v2">
 
   <nav class="topnav" aria-label="Primary">
     <div class="wrap">
-      <div class="logo">Beauty Echo</div>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <div class="nav-links">
-        <a href="#hero">Home</a>
+      <a class="logo" href="#hero">Beauty Echo</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="primary-navigation">
         <a href="#how">How It Works</a>
-        <a href="#consumers">For Consumers</a>
-        <a href="#brand">For Brand Managers</a>
-        <a href="#final">Contact</a>
+        <a href="#consumers">Consumer Experience</a>
+        <a href="#evidence">Consumer Evidence</a>
+        <a href="#brand">Brand Value</a>
+        <a href="#partner" class="nav-cta">Discuss a Brand Partnership</a>
       </div>
       <div class="lang-switch" role="navigation" aria-label="Language">
         <a class="lang is-active" href="./" lang="en">EN</a>
@@ -37,133 +37,224 @@
     <!-- 1) HERO -->
     <section id="hero" class="snap-section hero">
       <div class="wrap hero-content">
-        <div class="logo-wrap">
-          <img class="logo-mark" src="assets/logo.svg" alt="Beauty Echo logo" loading="lazy"
-               onerror="this.onerror=null;this.src='assets/logo.png'">
-        </div>
+        <div class="hero-copy">
+          <div class="logo-wrap">
+            <img class="logo-mark" src="assets/logo.png" alt="" width="1404" height="982">
+          </div>
 
-        <h1 class="brand-title">Beauty Echo</h1>
-        <p class="brand-sub">
-          AI powered platform that helps beauty brands understand the consumer better
-        </p>
-        <div class="ctas">
-          <a href="#final" class="btn primary">Join Pilot</a>
-          <a href="#final" class="btn ghost">Request Intro</a>
+          <p class="hero-label">Beauty Echo</p>
+          <h1 class="brand-title">Make every beauty purchase the beginning of a more personal customer relationship.</h1>
+          <div class="ctas">
+            <a href="#partner" class="btn primary">Discuss a Brand Partnership</a>
+            <a href="#how" class="btn ghost">See How It Works</a>
+          </div>
         </div>
       </div>
 
       <div class="hero-image-overlay" aria-hidden="true"></div>
     </section>
 
-    <!-- 2) HOW IT WORKS -->
-    <section id="how" class="snap-section how">
-      <div class="wrap">
-        <h1 class="section-title">How It Works</h1>
-        <p class="section-kicker muted">Engage · Analyze · Recommend</p>
-
-        <div class="how-grid">
-          <div class="how-card">
-            <img src="assets/how-listen.jpg" alt="Engage" class="how-img" loading="lazy">
-            <h2>Engage</h2>
-            <p class="desc">Consumers who share similar concerns and interests are brought together into a space where peer-to-peer conversations naturally spark new insights.</p>
-          </div>
-
-          <div class="how-card">
-            <img src="assets/how-analyze.png" alt="Analyze" class="how-img" loading="lazy">
-            <h2>Analyze</h2>
-            <p class="desc">Emerging themes, sentiment, and ingredient trends from the conversations are identified through Natural Language Processing (NLP), uncovering deeper insights automatically.</p>
-          </div>
-
-          <div class="how-card">
-            <img src="assets/how-recommend.png" alt="Recommend" class="how-img" loading="lazy">
-            <h2>Recommend</h2>
-            <p class="desc">Insights are transformed into testable actions, creative ideas, and faster product iterations.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3) FOR CONSUMERS -->
-    <section id="consumers" class="snap-section consumers">
-      <div class="wrap">
-        <h2 class="section-title">For Consumers</h2>
-        <p class="section-kicker">
-          Group-buy channel, dedicated chat rooms, and fast feedback — unified in one app.
-        </p>
-
-        <div class="consumers-grid">
-          <figure class="phone-card">
-            <img class="phone-img" src="assets/iphone-1.png" alt="Group-buy screen" loading="lazy">
-            <figcaption>A group-buying channel makes it easier for consumers to try brand products at a discounted price.</figcaption>
-          </figure>
-
-          <figure class="phone-card">
-            <img class="phone-img" src="assets/iphone-2.png" alt="Peer chat screen" loading="lazy">
-            <figcaption>People who share similar concerns and interests can exchange opinions in a safe space, sparking new learnings and moments of empathy.</figcaption>
-          </figure>
-
-          <figure class="phone-card">
-            <img class="phone-img" src="assets/iphone-3.png" alt="Brand manager chat screen" loading="lazy">
-            <figcaption>Consumers can interact directly with brand managers, creating real opportunities for their voices to influence future products.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4) BRAND MANAGERS -->
-    <section id="brand" class="snap-section brand">
-      <div class="wrap">
-        <header class="section-head">
-          <h2>For Brand Managers</h2>
-          <p class="muted">A Natural Language Processing (NLP) dashboard summarizes conversations into actionable insights.</p>
+    <!-- 2) POST-PURCHASE PROBLEM -->
+    <section id="post-purchase-gap" class="snap-section problem">
+      <div class="wrap problem-grid">
+        <header class="problem-head">
+          <p class="section-label">THE POST-PURCHASE GAP</p>
+          <h2>The most valuable part of the product journey often happens after checkout.</h2>
         </header>
 
-        <div class="brand-stage">
-          <div class="left-rail">
-            <div class="callout"><strong>Dashboard</strong>,<br>summarized by our AI’s Natural Language Processing (NLP), provides brands with actionable insights</div>
-            <div class="callout"><strong>Consumer statistics</strong>,<br>help understand their backgrounds</div>
-            <div class="callout"><strong>Deep analysis</strong>,<br>leads to better solutions &amp; faster iterations</div>
-          </div>
+        <div class="problem-content">
+          <p>After purchase, brands often know what was bought — but have little visibility into what consumers need, question, or experience while actually using the product.</p>
 
-          <figure class="device laptop">
-            <img src="assets/macbook-mock.png" alt="Brand dashboard" loading="lazy">
-          </figure>
+          <ul class="question-list">
+            <li>“Am I using this correctly?”</li>
+            <li>“Can I use this with vitamin C?”</li>
+            <li>“Why does this feel different today?”</li>
+          </ul>
+
+          <p class="problem-conclusion">Beauty Echo helps make these post-purchase needs visible through contextual conversations, giving consumers relevant guidance while giving brands a clearer view of the product journey.</p>
         </div>
       </div>
     </section>
 
-    <!-- 5) VALUE + TEAM + CONTACT -->
-    <section id="final" class="snap-section final">
-      <div class="wrap final-grid">
-        <div class="final-block">
-          <h2>Value for brands</h2>
-          <ul class="bullets">
-            <li>Faster iteration from feedback to action</li>
-            <li>Reduce roadmap & copy guesswork</li>
-            <li>Evidence-backed solution ideas</li>
-          </ul>
-        </div>
-        <div class="final-block">
-          <h2>Team</h2>
-          <p><strong>Delong Wang, Ph.D.</strong> — Founder &amp; CEO</p>
-          <p class="muted">Seeking CTO co-founder (Natural Language Processing (NLP) / Data Engineering).</p>
-        </div>
-        <div class="final-block">
-          <h2>Contact</h2>
-          <p>Email: <a href="mailto:delongw@beauty-echo.com">delongw@beauty-echo.com</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/delong-wang-ph-d-02a936133" target="_blank" rel="noopener">www.linkedin.com/in/delong-wang-ph-d-02a936133</a></p>
-          <p class="status muted">MVP launched · Recruiting CTO co-founder · Accepting pilot brands</p>
+    <!-- 3) HOW IT WORKS -->
+    <section id="how" class="snap-section how">
+      <div class="wrap">
+        <header class="v2-section-head">
+          <p class="section-label">HOW IT WORKS</p>
+          <h2 class="v2-section-title">From purchase to personalized guidance to the next best action.</h2>
+        </header>
+
+        <ol class="how-grid">
+          <li class="how-card">
+            <p class="how-step">01 — Purchase</p>
+            <h3>Start the relationship when the product is purchased.</h3>
+            <p class="desc">A convenient, private channel keeps the post-purchase relationship centered on the product the consumer purchased.</p>
+          </li>
+
+          <li class="how-card">
+            <p class="how-step">02 — Personalized Guidance</p>
+            <h3>Support each consumer throughout their skincare journey.</h3>
+            <p class="desc">Consumers get caring support for questions, product use, and routines—making skincare easier and more reassuring.</p>
+          </li>
+
+          <li class="how-card">
+            <p class="how-step">03 — Next Best Action</p>
+            <h3>Turn everyday conversations into lasting brand value.</h3>
+            <p class="desc">Post-purchase interactions become structured insight that helps brands make better-informed product and engagement decisions.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4) CONSUMER EXPERIENCE -->
+    <section id="consumers" class="snap-section consumers">
+      <div class="wrap">
+        <header class="v2-section-head consumer-intro">
+          <p class="section-label">CONSUMER EXPERIENCE</p>
+          <h2 class="v2-section-title">Support for the small moments that shape the product experience.</h2>
+        </header>
+
+        <div class="experience-grid">
+          <article class="experience-card">
+            <h3>Understand Product Compatibility</h3>
+            <div class="experience-visual">
+              <p class="experience-quote">“Can I use this with vitamin C?”</p>
+            </div>
+            <p class="experience-copy">Navigate product and ingredient questions with clear, scientifically grounded explanations.</p>
+          </article>
+
+          <article class="experience-card">
+            <h3>Notice Skin Changes Over Time</h3>
+            <div class="experience-visual">
+              <p class="experience-quote">“Why does my skin feel different this week?”</p>
+            </div>
+            <p class="experience-copy">See how skin and product experience evolve over time, making everyday skincare easier to understand.</p>
+          </article>
+
+          <article class="experience-card">
+            <h3>Enjoy a More Personal Journey</h3>
+            <div class="experience-visual">
+              <p class="experience-quote">“The experience becomes more personal over time.”</p>
+            </div>
+            <p class="experience-copy">Each conversation builds on the last, making guidance feel more personal and relevant over time.</p>
+          </article>
         </div>
       </div>
-      <footer class="foot">
-        © 2025 Beauty Echo · <a href="#">Privacy</a> · <a href="#">Terms</a>
-      </footer>
+    </section>
+
+    <!-- 5) PREVIOUS PROOF OF CONCEPT -->
+    <section id="evidence" class="snap-section evidence">
+      <div class="wrap">
+        <header class="v2-section-head evidence-head">
+          <p class="section-label">PREVIOUS PROOF OF CONCEPT</p>
+          <h2 class="v2-section-title">A post-purchase conversation experience consumers rated highly.</h2>
+          <p class="evidence-sample">Final survey — <strong>n = 16</strong></p>
+        </header>
+
+        <div class="metric-grid" aria-label="Previous proof of concept final survey ratings">
+          <article class="metric-block">
+            <p class="metric-score">4.81 / 5</p>
+            <h3>Product experience improvement</h3>
+          </article>
+          <article class="metric-block">
+            <p class="metric-score">4.69 / 5</p>
+            <h3>Skincare question resolution</h3>
+          </article>
+          <article class="metric-block">
+            <p class="metric-score">4.69 / 5</p>
+            <h3>Trust in AI guidance</h3>
+          </article>
+          <article class="metric-block">
+            <p class="metric-score">4.44 / 5</p>
+            <h3>Motivation to converse</h3>
+          </article>
+        </div>
+
+        <p class="evidence-finding">Participants reported value in four recurring areas: quick answers to everyday skincare questions, product-and-routine compatibility guidance, clear scientific explanations, and continuity across conversations.</p>
+      </div>
+    </section>
+
+    <!-- 6) VALUE FOR BEAUTY BRANDS -->
+    <section id="brand" class="snap-section brand-values">
+      <div class="wrap brand-value-layout">
+        <div class="brand-value-intro">
+          <header class="v2-section-head">
+            <p class="section-label">FOR BEAUTY BRANDS</p>
+            <h2 class="v2-section-title">Understand what happens after purchase — and communicate more intelligently.</h2>
+          </header>
+        </div>
+
+        <div class="brand-value-grid">
+          <article class="brand-value-item">
+            <h3>Understand Product Use</h3>
+            <p>Understand the questions, routines, combinations, and usage patterns that emerge after purchase.</p>
+          </article>
+          <article class="brand-value-item">
+            <h3>Discover Consumer Insights</h3>
+            <p>Reveal recurring themes, behaviors, friction points, motivations, and emerging needs the brand can act on.</p>
+          </article>
+          <article class="brand-value-item">
+            <h3>Build a Smarter Communication Channel</h3>
+            <p>Bring brand-approved product knowledge and skincare guidance into more relevant ongoing conversations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7) PARTNER WITH BEAUTY ECHO -->
+    <section id="partner" class="snap-section partner" aria-labelledby="partner-title">
+      <div class="wrap">
+        <div class="partner-header">
+          <header class="v2-section-head">
+            <p class="section-label">PARTNER WITH BEAUTY ECHO</p>
+            <h2 id="partner-title" class="v2-section-title">Bring your brand’s expertise into a more intelligent post-purchase experience.</h2>
+          </header>
+
+          <figure class="partner-testimonial">
+            <blockquote>
+              <p>“I really enjoyed the experience and learned more about beauty. There were things I would have felt a little embarrassed asking another person, but with AI, I could ask openly.”</p>
+            </blockquote>
+            <figcaption>Previous Proof of Concept participant</figcaption>
+          </figure>
+        </div>
+
+        <div class="partner-benefits">
+          <article class="partner-benefit">
+            <h3>Bring your expertise into every product journey.</h3>
+          </article>
+          <article class="partner-benefit">
+            <h3>Learn from what happens after purchase.</h3>
+          </article>
+          <article class="partner-benefit">
+            <h3>Make every interaction more relevant.</h3>
+          </article>
+        </div>
+
+        <div class="partner-contact">
+          <p class="partner-founder"><strong>Delong Wang, Ph.D. — Founder &amp; CEO</strong></p>
+          <p class="partner-credibility">University of Tokyo–trained applied chemical biologist with experience spanning commercial beauty-product development, skin-science research, and R&amp;D leadership at major Japanese beauty companies.</p>
+          <div class="ctas">
+            <a class="btn primary" href="mailto:delongw@beauty-echo.com">Email Us</a>
+            <a href="mailto:delongw@beauty-echo.com">delongw@beauty-echo.com</a>
+            <a href="https://www.linkedin.com/in/delong-wang-ph-d-02a936133" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+
+        <footer class="footer-bottom">
+          <p>© 2026 Beauty Echo</p>
+          <div class="lang-switch" role="navigation" aria-label="Footer language">
+            <a class="lang is-active" href="./" lang="en" aria-current="page">EN</a>
+            <span aria-hidden="true">/</span>
+            <a class="lang" href="ja/" lang="ja">日本語</a>
+          </div>
+        </footer>
+      </div>
     </section>
 
   </main>
 
   <script>
-    // Small, safe enhancement: collapse nav links behind a toggle under 860px
+    // Small, safe enhancement: collapse nav links behind a toggle at compact widths
     const toggle = document.querySelector('.nav-toggle');
     const links = document.querySelector('.nav-links');
     if (toggle && links) {
