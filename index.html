@@ -265,24 +265,50 @@
     }
   </script>
   <script>
-    (function(){
-      try{
-        const KEY = 'be_lang';
-        const chosen = localStorage.getItem(KEY);
-        if(!chosen){
-          const isJA = (navigator.language || '').toLowerCase().startsWith('ja');
-          if(isJA && location.pathname.endsWith('/')){ location.replace('ja/'); }
-          if(isJA && location.pathname.endsWith('/index.html')){ location.replace('../ja/'); }
+    (function () {
+      try {
+        const DETECTED_KEY = 'be_lang_detected';
+        const LEGACY_KEY = 'be_lang';
+        const legacyChoice = localStorage.getItem(LEGACY_KEY);
+        const hasDetectedBefore =
+          localStorage.getItem(DETECTED_KEY) === '1' ||
+          legacyChoice !== null;
+
+        // Existing visitors from the previous implementation are not treated as new.
+        if (legacyChoice !== null) {
+          localStorage.setItem(DETECTED_KEY, '1');
         }
 
-        // remember clicks on the switcher
-        document.querySelectorAll('.lang-switch .lang').forEach(a=>{
-          a.addEventListener('click', ()=> {
-            const lang = a.getAttribute('lang') || (a.textContent.includes('日本')?'ja':'en');
-            localStorage.setItem(KEY, lang);
+        const browserLanguage =
+          (navigator.language || '').toLowerCase();
+
+        const isJapaneseBrowser = browserLanguage.startsWith('ja');
+
+        // Automatic browser-language detection is allowed only once, on a new visitor's
+        // first visit to the English root page. It is never repeated on later visits.
+        const isEnglishRoot =
+          location.pathname === '/' ||
+          location.pathname === '/index.html';
+
+        if (!hasDetectedBefore && isEnglishRoot) {
+          localStorage.setItem(DETECTED_KEY, '1');
+
+          if (isJapaneseBrowser) {
+            location.replace('/ja/');
+            return;
+          }
+        }
+
+        // Any explicit language-switch click also marks language detection as completed.
+        // The click itself performs the navigation; no saved preference is used to force
+        // a language on future visits.
+        document.querySelectorAll('.lang-switch .lang').forEach(a => {
+          a.addEventListener('click', () => {
+            localStorage.setItem(DETECTED_KEY, '1');
           });
         });
-      }catch(e){}
+
+      } catch (e) {}
     })();
   </script>
 </body>
